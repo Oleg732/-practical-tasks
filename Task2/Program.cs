@@ -7,6 +7,7 @@
         while (n > 0)
         {
             ternaryNumber = (n % notation) + ternaryNumber;
+
             n /= notation;
         }
 

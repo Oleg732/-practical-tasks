@@ -8,8 +8,13 @@ internal class Program
 
         var line = Console.ReadLine();
 
-        line.ToCharArray();
+        var maxCount = GetMaxCountOfSequenceUniqChars(line);
 
+        Console.WriteLine(maxCount);
+    }
+
+    private static int GetMaxCountOfSequenceUniqChars(string? line)
+    {
         var lineChars = line.ToCharArray();
 
         var maxCount = 0;
@@ -26,7 +31,6 @@ internal class Program
 
                     if (maxCount < index)
                     {
-                        
                         maxCount += index == 1 ? maxCount + 2 : maxCount++;
                     }
                 }
@@ -34,8 +38,6 @@ internal class Program
             }
         }
 
-
-
-
+        return maxCount;
     }
 }

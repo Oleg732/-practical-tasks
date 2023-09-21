@@ -8,7 +8,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var vechicles = new List<Vehicle>()
+        var vehicles = new List<Vehicle>()
         {
             new Car()
             {
@@ -16,20 +16,20 @@ internal class Program
                 {
                     HP = 400,
                     Capacity = 3,
-                    EngineNumber = "PJ12345U123456P",
-                    EngineType = "WEngine"
+                    Number = "PJ12345U123456P",
+                    Type = "WEngine"
                 },
                 Chassis = new Chassis()
                 {
-                    chassisnumber = "231000В0102526",
-                    permissibleLoad = 3000,
-                    wheels = 4
+                    Number = "231000В0102526",
+                    PermissibleLoad = 3000,
+                    Wheels = 4
                 },
-                transmission = new Transmission()
+                Transmission = new Transmission()
                 {
-                    gears = 6,
-                    manufacturer = "Toyota",
-                    transmissionType = "Fwd"
+                    Gears = 6,
+                    Manufacturer = "Toyota",
+                    Type = "Fwd"
                 }
             },
             new Bike()
@@ -38,20 +38,20 @@ internal class Program
                 {
                     HP = 200,
                     Capacity = 100,
-                    EngineNumber = "SJ32345U123626V",
-                    EngineType = "Two-stroke engine"
+                    Number = "SJ32345U123626V",
+                    Type = "Two-stroke engine"
                 },
                 Chassis = new Chassis()
                 {
-                    chassisnumber = "860234S0113214",
-                    permissibleLoad = 2000,
-                    wheels = 2
+                    Number = "860234S0113214",
+                    PermissibleLoad = 2000,
+                    Wheels = 2
                 },
-                transmission = new Transmission()
+                Transmission = new Transmission()
                 {
-                    gears = 4,
-                    manufacturer = "Suzuki",
-                    transmissionType = "Fwd"
+                    Gears = 4,
+                    Manufacturer = "Suzuki",
+                    Type = "Fwd"
                 }
             },
             new Truck()
@@ -60,20 +60,20 @@ internal class Program
                 {
                     HP = 800,
                     Capacity = 12,
-                    EngineNumber = "AC12146Y631323V",
-                    EngineType = "V12"
+                    Number = "AC12146Y631323V",
+                    Type = "V12"
                 },
                 Chassis = new Chassis()
                 {
-                    chassisnumber = "110244S0225285",
-                    permissibleLoad = 5000,
-                    wheels = 6
+                    Number = "110244S0225285",
+                    PermissibleLoad = 5000,
+                    Wheels = 6
                 },
-                transmission = new Transmission()
+                Transmission = new Transmission()
                 {
-                    gears = 12,
-                    manufacturer = "Ford",
-                    transmissionType = "Awd"
+                    Gears = 12,
+                    Manufacturer = "Ford",
+                    Type = "Awd"
                 }
             },
             new Bus()
@@ -81,34 +81,33 @@ internal class Program
                 Engine = new Engine()
                 {
                     HP = 286,
-                    Capacity = 6375,
-                    EngineNumber = "BY33233U298765L",
-                    EngineType = "V6"
+                    Capacity = 6,
+                    Number = "BY33233U298765L",
+                    Type = "V6"
                 },
                 Chassis = new Chassis()
                 {
-                    chassisnumber = "90034769227721",
-                    permissibleLoad = 4500,
-                    wheels = 4
+                    Number = "90034769227721",
+                    PermissibleLoad = 4500,
+                    Wheels = 4
                 },
-                transmission = new Transmission()
+                Transmission = new Transmission()
                 {
-                    gears = 8,
-                    manufacturer = "Mercedec",
-                    transmissionType = "Awd"
+                    Gears = 8,
+                    Manufacturer = "Mercedec",
+                    Type = "Awd"
                 }
             } };
 
-
-        foreach (var vechicle in vechicles)
+        foreach (var vehicle in vehicles)
         {
-            Console.WriteLine(vechicle.Name);
+            Console.WriteLine(vehicle.Name);
 
-            Console.WriteLine($"Engine: {vechicle.Engine.HP} {vechicle.Engine.Capacity} {vechicle.Engine.EngineNumber} {vechicle.Engine.EngineType}");
+            Console.WriteLine($"Engine: {vehicle.Engine.HP} {vehicle.Engine.Capacity} {vehicle.Engine.Number} {vehicle.Engine.Type}");
 
-            Console.WriteLine($"Chassis: {vechicle.Chassis.chassisnumber} {vechicle.Chassis.permissibleLoad} {vechicle.Chassis.wheels}");
+            Console.WriteLine($"Chassis: {vehicle.Chassis.Number} {vehicle.Chassis.PermissibleLoad} {vehicle.Chassis.Wheels}");
 
-            Console.WriteLine($"Transmission: {vechicle.transmission.gears} {vechicle.transmission.manufacturer} {vechicle.transmission.transmissionType}");
+            Console.WriteLine($"Transmission: {vehicle.Transmission.Gears} {vehicle.Transmission.Manufacturer} {vehicle.Transmission.Type}");
 
         }
     }
